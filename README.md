@@ -1,6 +1,4 @@
-# Título do projeto
-
-Calculadora de investimentos CDB
+# Calculadora de investimentos CDB
 
 ## 🚀 Começando
 
