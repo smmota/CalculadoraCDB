@@ -4,13 +4,17 @@
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-## 📋 Pré-requisitos
+## 📋 Objetivo
+
+Criar uma calculadora de investimentos CDB que receba o valor da aplicação financeira e o prazo que a investimento ficará aplicado. O retorno do cálculo é o valor bruto do investimento e o valor líquido, já com o imposto de renda descontado
+
+## 🛠️ Construído com
 
 Abaixo estão listadas as ferramentas utilizadas para o desenvolvimento dos projetos
 
 ### 📌 IDE's utilizadas:
-- Visual Studio
-- Visual Studio Code
+- Visual Studio 2022
+- Visual Studio Code 1.81.1
 
 ### 📌 Frameworks utilizados:
 
@@ -27,4 +31,4 @@ Abaixo estão listadas as ferramentas utilizadas para o desenvolvimento dos proj
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
+Os testes foram realizados com dados mock para validar se o cálculo foram realizados corretamente
