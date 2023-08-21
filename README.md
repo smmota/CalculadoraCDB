@@ -4,16 +4,20 @@
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-### 📋 Pré-requisitos
+## 📋 Pré-requisitos
 
-IDE's utilizadas:
+Abaixo estão listadas as ferramentas utilizadas para o desenvolvimento dos projetos
+
+### 📌 IDE's utilizadas:
 - Visual Studio
 - Visual Studio Code
 
-Frameworks utilizados:
-Backend: 
+### 📌 Frameworks utilizados:
+
+#### Backend: 
 - .Net Core 7.0 
-Frontend: 
+
+#### Frontend: 
 - Angular CLI 16.2.0
 - Node.js 18.17.1
 - NPM 9.6.7
