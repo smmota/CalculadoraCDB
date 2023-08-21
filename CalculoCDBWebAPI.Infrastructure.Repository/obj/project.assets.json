@@ -1028,42 +1028,59 @@
           }
         }
       },
-      "CalculoCDBWebAPI.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/CalculoCDBWebAPI.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CalculoCDBWebAPI.Domain.dll": {}
-        }
-      },
-      "CalculoCDBWebAPI.Domain.Core/1.0.0": {
+      "CalculoCDBWebAPI.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "CalculoCDBWebAPI.Domain": "1.0.0"
+          "CalculoCDBWebAPI.Application.DTO": "1.0.0",
+          "CalculoCDBWebAPI.Application.Tests": "1.0.0",
+          "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/CalculoCDBWebAPI.Domain.Core.dll": {}
+          "bin/placeholder/CalculoCDBWebAPI.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CalculoCDBWebAPI.Domain.Core.dll": {}
+          "bin/placeholder/CalculoCDBWebAPI.Application.dll": {}
         }
       },
-      "CalculoCDBWebAPI.Infrastructure.Data/1.0.0": {
+      "CalculoCDBWebAPI.Application.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CalculoCDBWebAPI.Application.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculoCDBWebAPI.Application.DTO.dll": {}
+        }
+      },
+      "CalculoCDBWebAPI.Application.Tests/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "CalculoCDBWebAPI.Domain": "1.0.0",
+          "CalculoCDBWebAPI.Application": "1.0.0",
+          "CalculoCDBWebAPI.Application.DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
         },
         "compile": {
-          "bin/placeholder/CalculoCDBWebAPI.Infrastructure.Data.dll": {}
+          "bin/placeholder/CalculoCDBWebAPI.Application.Tests.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CalculoCDBWebAPI.Infrastructure.Data.dll": {}
+          "bin/placeholder/CalculoCDBWebAPI.Application.Tests.dll": {}
+        }
+      },
+      "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CalculoCDBWebAPI.Application.DTO": "1.0.0",
+          "CalculoCDBWebAPI.Application.Tests": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.dll": {}
         }
       }
     }
@@ -3210,26 +3227,30 @@
         "version.txt"
       ]
     },
-    "CalculoCDBWebAPI.Domain/1.0.0": {
+    "CalculoCDBWebAPI.Application/1.0.0": {
       "type": "project",
-      "path": "../CalculoCDBWebAPI.Domain/CalculoCDBWebAPI.Domain.csproj",
-      "msbuildProject": "../CalculoCDBWebAPI.Domain/CalculoCDBWebAPI.Domain.csproj"
+      "path": "../CalculoCDBWebAPI.Application/CalculoCDBWebAPI.Application.csproj",
+      "msbuildProject": "../CalculoCDBWebAPI.Application/CalculoCDBWebAPI.Application.csproj"
     },
-    "CalculoCDBWebAPI.Domain.Core/1.0.0": {
+    "CalculoCDBWebAPI.Application.DTO/1.0.0": {
       "type": "project",
-      "path": "../CalculoCDBWebAPI.Domain.Core/CalculoCDBWebAPI.Domain.Core.csproj",
-      "msbuildProject": "../CalculoCDBWebAPI.Domain.Core/CalculoCDBWebAPI.Domain.Core.csproj"
+      "path": "../CalculoCDBWebAPI.Application.DTO/CalculoCDBWebAPI.Application.DTO.csproj",
+      "msbuildProject": "../CalculoCDBWebAPI.Application.DTO/CalculoCDBWebAPI.Application.DTO.csproj"
     },
-    "CalculoCDBWebAPI.Infrastructure.Data/1.0.0": {
+    "CalculoCDBWebAPI.Application.Tests/1.0.0": {
       "type": "project",
       "path": "../CalculoCDBWebAPI.Infrastructure.Data/CalculoCDBWebAPI.Infrastructure.Data.csproj",
       "msbuildProject": "../CalculoCDBWebAPI.Infrastructure.Data/CalculoCDBWebAPI.Infrastructure.Data.csproj"
+    },
+    "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/1.0.0": {
+      "type": "project",
+      "path": "../CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.csproj",
+      "msbuildProject": "../CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "CalculoCDBWebAPI.Domain.Core >= 1.0.0",
-      "CalculoCDBWebAPI.Infrastructure.Data >= 1.0.0"
+      "CalculoCDBWebAPI.Application.Tests >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3296,5 +3317,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  CalculoCDBWebAPI.Infrastructure.Repository -> CalculoCDBWebAPI.Application.Tests -> CalculoCDBWebAPI.Application -> CalculoCDBWebAPI.Application.Tests.",
+      "libraryId": "CalculoCDBWebAPI.Application.Tests",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

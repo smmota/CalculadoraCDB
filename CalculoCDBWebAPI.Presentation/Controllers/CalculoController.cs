@@ -21,7 +21,7 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
         [Route("CDB")]
         [EnableCors()]
         [HttpPost]
-        public async Task<IActionResult> CalcularCDB([FromBody] AplicacaoDto AplicacaoDto) 
+        public async Task<IActionResult> CalcularCDB([FromBody] AplicacaoDto AplicacaoDto)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
 
                 var taxas = await _serviceTaxa.GetAll();
 
-                if (taxas.Count() == 0 || taxas == null)
+                if (!taxas.Any() || taxas == null)
                     throw new Exception("Erro ao obter a taxas bases para o cálculo");
 
                 double txCDI = Math.Round(taxas.First(x => x.Id == TaxaEnum.CDI.GetHashCode()).ValorPercentual, 1);

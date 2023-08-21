@@ -13,16 +13,8 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
 
         public CalculoDto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTBDecimal)
         {
-            try
-            {
-                ValidaParametros(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
-                CalculoValorBruto(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
-                CalculoImpostoRenda(this);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            CalculoValorBruto(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
+            CalculoImpostoRenda(this);
         }
 
         internal CalculoDto CalculoValorBruto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTB)
@@ -31,8 +23,6 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
             {
                 ValorAplicado = valorAplicado ?? 0;
                 QuantidadeMeses = quantidadeMeses ?? 0;
-
-                taxaTB = 106;
 
                 decimal valorFinal = 0;
                 decimal valorInicial = ValorAplicado;
@@ -79,36 +69,6 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
                 CalculoDto.ValorLiquido = Math.Round((CalculoDto.ValorBruto - valorImpostoRenda), 2);
 
                 return this;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        internal void ValidaParametros(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTBDecimal)
-        {
-            try
-            {
-                if (valorAplicado == null)
-                {
-                    throw new Exception("Valor da aplicação não pode ser nulo!");
-                }
-
-                if (quantidadeMeses == null)
-                {
-                    throw new Exception("Prazo não pode ser nulo!");
-                }
-
-                if (valorAplicado <= 0)
-                {
-                    throw new Exception("Valor da aplicação deve ser maior que zero!");
-                }
-
-                if (quantidadeMeses <= 1)
-                {
-                    throw new Exception("Prazo deve ser maior que um!");
-                }
             }
             catch (Exception ex)
             {
