@@ -11,44 +11,44 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Mapper
 {
     public class MapperTaxa : IMapperTaxa
     {
-        List<TaxaDTO> taxaDTOs = new List<TaxaDTO>();
+        private readonly List<TaxaDto> TaxaDtos = new List<TaxaDto>();
 
-        public IEnumerable<TaxaDTO> MapperList(IEnumerable<Taxa> taxas)
+        public IEnumerable<TaxaDto> MapperList(IEnumerable<Taxa> taxas)
         {
             foreach (var item in taxas)
             {
-                TaxaDTO taxaDto = new TaxaDTO
+                TaxaDto TaxaDto = new TaxaDto
                 {
                     Id = item.Id,
                     Descricao = item.Descricao,
                     ValorPercentual = item.ValorPercentual
                 };
 
-                taxaDTOs.Add(taxaDto);
+                TaxaDtos.Add(TaxaDto);
             }
 
-            return taxaDTOs;
+            return TaxaDtos;
         }
 
-        public TaxaDTO MapperToDTO(Taxa taxa)
+        public TaxaDto MapperToDTO(Taxa taxa)
         {
-            TaxaDTO taxaDTO = new TaxaDTO
+            TaxaDto TaxaDto = new TaxaDto
             {
                 Id = taxa.Id,
                 Descricao = taxa.Descricao,
                 ValorPercentual = taxa.ValorPercentual
             };
 
-            return taxaDTO;
+            return TaxaDto;
         }
 
-        public Taxa MapperToEntity(TaxaDTO taxaDTO)
+        public Taxa MapperToEntity(TaxaDto TaxaDto)
         {
             Taxa taxa = new Taxa
             {
-                Id = taxaDTO.Id,
-                Descricao = taxaDTO.Descricao,
-                ValorPercentual = taxaDTO.ValorPercentual
+                Id = TaxaDto.Id,
+                Descricao = TaxaDto.Descricao,
+                ValorPercentual = TaxaDto.ValorPercentual
             };
 
             return taxa;

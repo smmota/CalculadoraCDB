@@ -5,8 +5,8 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Interfaces
 {
     public interface IMapperCalculo
     {
-        Calculo MapperToEntity(CalculoDTO calculoDTO);
-        IEnumerable<CalculoDTO> MapperList(IEnumerable<Calculo> calculos);
-        CalculoDTO MapperToDTO(Calculo calculo);
+        Calculo MapperToEntity(CalculoDto CalculoDto);
+        IEnumerable<CalculoDto> MapperList(IEnumerable<Calculo> calculos);
+        CalculoDto MapperToDTO(Calculo calculo);
     }
 }

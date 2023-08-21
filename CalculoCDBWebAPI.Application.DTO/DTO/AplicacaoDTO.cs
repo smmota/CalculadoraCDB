@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CalculoCDBWebAPI.Application.DTO.DTO
 {
-    public class AplicacaoDTO
+    public class AplicacaoDto
     {
         [Required(ErrorMessage = "Informe o valor aplicado")]
         public Decimal? ValorAplicado { get; set; }

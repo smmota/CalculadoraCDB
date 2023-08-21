@@ -6,13 +6,13 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Mapper
 {
     public class MapperCalculo : IMapperCalculo
     {
-        List<CalculoDTO> calculoDTOs = new List<CalculoDTO>();
+        private readonly List<CalculoDto> CalculoDtos = new List<CalculoDto>();
 
-        public IEnumerable<CalculoDTO> MapperList(IEnumerable<Calculo> calculos)
+        public IEnumerable<CalculoDto> MapperList(IEnumerable<Calculo> calculos)
         {
             foreach (var item in calculos)
             {
-                CalculoDTO calculoDto = new CalculoDTO
+                CalculoDto CalculoDto = new CalculoDto
                 {
                     ValorAplicado = item.ValorAplicado,
                     QuantidadeMeses = item.QuantidadeMeses,
@@ -20,15 +20,15 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Mapper
                     ValorLiquido = item.ValorLiquido
                 };
 
-                calculoDTOs.Add(calculoDto);
+                CalculoDtos.Add(CalculoDto);
             }
 
-            return calculoDTOs;
+            return CalculoDtos;
         }
 
-        public CalculoDTO MapperToDTO(Calculo calculo)
+        public CalculoDto MapperToDTO(Calculo calculo)
         {
-            CalculoDTO calculoDTO = new CalculoDTO
+            CalculoDto CalculoDto = new CalculoDto
             {
                 ValorAplicado = calculo.ValorAplicado,
                 ValorBruto = calculo.ValorBruto,
@@ -36,17 +36,17 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Mapper
                 ValorLiquido = calculo.ValorLiquido
             };
 
-            return calculoDTO;
+            return CalculoDto;
         }
 
-        public Calculo MapperToEntity(CalculoDTO calculoDTO)
+        public Calculo MapperToEntity(CalculoDto CalculoDto)
         {
             Calculo calculo = new Calculo
             {
-                ValorAplicado = calculoDTO.ValorAplicado,
-                ValorBruto = calculoDTO.ValorBruto,
-                QuantidadeMeses = calculoDTO.QuantidadeMeses,
-                ValorLiquido = calculoDTO.ValorLiquido
+                ValorAplicado = CalculoDto.ValorAplicado,
+                ValorBruto = CalculoDto.ValorBruto,
+                QuantidadeMeses = CalculoDto.QuantidadeMeses,
+                ValorLiquido = CalculoDto.ValorLiquido
             };
 
             return calculo;

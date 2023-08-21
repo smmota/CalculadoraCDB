@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculoCDBWebAPI.Application.DTO.DTO
 {
-    public class TaxaDTO
+    public class TaxaDto
     {
         public int? Id { get; set; }
         public string? Descricao { get; set; }

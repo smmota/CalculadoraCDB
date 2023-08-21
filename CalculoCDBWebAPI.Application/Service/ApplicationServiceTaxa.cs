@@ -21,7 +21,7 @@ namespace CalculoCDBWebAPI.Application.Service
             _mapper = mapper;
         }
 
-        public async Task Add(TaxaDTO obj)
+        public async Task Add(TaxaDto obj)
         {
             var objTaxa = _mapper.MapperToEntity(obj);
             await _service.Add(objTaxa);
@@ -32,25 +32,25 @@ namespace CalculoCDBWebAPI.Application.Service
             await _service.Dispose();
         }
 
-        public async Task<IEnumerable<TaxaDTO>> GetAll()
+        public async Task<IEnumerable<TaxaDto>> GetAll()
         {
             var objTaxas = await _service.GetAll();
             return _mapper.MapperList(objTaxas);
         }
 
-        public async Task<TaxaDTO> GetById(int id)
+        public async Task<TaxaDto> GetById(int id)
         {
             var objTaxa = await _service.GetById(id);
             return _mapper.MapperToDTO(objTaxa);
         }
 
-        public async Task Remove(TaxaDTO obj)
+        public async Task Remove(TaxaDto obj)
         {
             var objTaxa = _mapper.MapperToEntity(obj);
             await _service.Remove(objTaxa);
         }
 
-        public async Task Update(TaxaDTO obj)
+        public async Task Update(TaxaDto obj)
         {
             var objTaxa = _mapper.MapperToEntity(obj);
             await _service.Update(objTaxa);

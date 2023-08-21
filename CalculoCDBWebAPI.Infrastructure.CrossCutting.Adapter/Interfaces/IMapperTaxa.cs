@@ -10,8 +10,8 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Interfaces
 {
     public interface IMapperTaxa
     {
-        Taxa MapperToEntity(TaxaDTO taxaDTO);
-        IEnumerable<TaxaDTO> MapperList(IEnumerable<Taxa> taxas);
-        TaxaDTO MapperToDTO(Taxa taxa);
+        Taxa MapperToEntity(TaxaDto TaxaDto);
+        IEnumerable<TaxaDto> MapperList(IEnumerable<Taxa> taxas);
+        TaxaDto MapperToDTO(Taxa taxa);
     }
 }

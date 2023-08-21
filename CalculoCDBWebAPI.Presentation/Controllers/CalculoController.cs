@@ -21,14 +21,14 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
         [Route("CDB")]
         [EnableCors()]
         [HttpPost]
-        public async Task<IActionResult> CalcularCDB([FromBody] AplicacaoDTO aplicacaoDTO) 
+        public async Task<IActionResult> CalcularCDB([FromBody] AplicacaoDto AplicacaoDto) 
         {
             try
             {
-                if (aplicacaoDTO.ValorAplicado <= 0)
+                if (AplicacaoDto.ValorAplicado <= 0)
                     ModelState.AddModelError("Valor Aplicado", "O valor aplicado não pode ser menor ou igual a zero");
 
-                if (aplicacaoDTO.QuantidadeMeses <= 1)
+                if (AplicacaoDto.QuantidadeMeses <= 1)
                     ModelState.AddModelError("Quantidade de Meses", "A quantidade de meses deve ser maior que um");
 
                 if (!ModelState.IsValid)
@@ -39,16 +39,15 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
                 if (taxas.Count() == 0 || taxas == null)
                     throw new Exception("Erro ao obter a taxas bases para o cálculo");
 
-                double txCDI = Math.Round(taxas.Where(x => x.Id == (int)TaxaEnum.CDI.GetHashCode()).First().ValorPercentual, 1);
-                double txTB = Math.Round(taxas.Where(x => x.Id == (int)TaxaEnum.TB.GetHashCode()).First().ValorPercentual, 1);
-                
-                CalculoDTO calculo = new CalculoDTO(aplicacaoDTO.ValorAplicado, aplicacaoDTO.QuantidadeMeses, txCDI, txTB);
+                double txCDI = Math.Round(taxas.First(x => x.Id == TaxaEnum.CDI.GetHashCode()).ValorPercentual, 1);
+                double txTB = Math.Round(taxas.First(x => x.Id == TaxaEnum.TB.GetHashCode()).ValorPercentual, 1);
+
+                CalculoDto calculo = new CalculoDto(AplicacaoDto.ValorAplicado, AplicacaoDto.QuantidadeMeses, txCDI, txTB);
 
                 return Ok(calculo);
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }

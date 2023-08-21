@@ -2,22 +2,30 @@
 
 namespace CalculoCDBWebAPI.Application.DTO.DTO
 {
-    public class CalculoDTO
+    public class CalculoDto
     {
         public Decimal ValorAplicado { get; set; }
         public int QuantidadeMeses { get; set; }
         public Decimal ValorBruto { get; set; }
         public Decimal ValorLiquido { get; set; }
 
-        public CalculoDTO() { }
+        public CalculoDto() { }
 
-        public CalculoDTO(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTBDecimal)
+        public CalculoDto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTBDecimal)
         {
-            CalculoValorBruto(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
-            CalculoImpostoRenda(this);
+            try
+            {
+                ValidaParametros(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
+                CalculoValorBruto(valorAplicado, quantidadeMeses, taxaCDI, taxaTBDecimal);
+                CalculoImpostoRenda(this);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        internal CalculoDTO CalculoValorBruto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTB)
+        internal CalculoDto CalculoValorBruto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTB)
         {
             try
             {
@@ -42,7 +50,7 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
                 }
 
                 ValorBruto = valorFinal;
-                return new CalculoDTO();
+                return this;
             }
             catch (Exception ex)
             {
@@ -50,27 +58,57 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
             }
         }
 
-        internal CalculoDTO CalculoImpostoRenda(CalculoDTO calculoDTO)
+        internal CalculoDto CalculoImpostoRenda(CalculoDto CalculoDto)
         {
             try
             {
                 decimal taxaImpostoRenda = 0;
 
-                if (calculoDTO.QuantidadeMeses > 1 && calculoDTO.QuantidadeMeses <= 6)
+                if (CalculoDto.QuantidadeMeses > 1 && CalculoDto.QuantidadeMeses <= 6)
                     taxaImpostoRenda = Math.Round(Convert.ToDecimal(22.5), 2);
-                else if(calculoDTO.QuantidadeMeses > 6 && calculoDTO.QuantidadeMeses <= 12)
+                else if(CalculoDto.QuantidadeMeses > 6 && CalculoDto.QuantidadeMeses <= 12)
                     taxaImpostoRenda = Math.Round(Convert.ToDecimal(20.0), 2);
-                else if (calculoDTO.QuantidadeMeses > 12 && calculoDTO.QuantidadeMeses <= 24)
+                else if (CalculoDto.QuantidadeMeses > 12 && CalculoDto.QuantidadeMeses <= 24)
                     taxaImpostoRenda = Math.Round(Convert.ToDecimal(17.5), 2);
-                else if (calculoDTO.QuantidadeMeses > 24)
+                else if (CalculoDto.QuantidadeMeses > 24)
                     taxaImpostoRenda = Math.Round(Convert.ToDecimal(15.0), 2);
 
-                var lucro = (Math.Round(calculoDTO.ValorBruto, 2) - Math.Round(calculoDTO.ValorAplicado, 2));
+                var lucro = (Math.Round(CalculoDto.ValorBruto, 2) - Math.Round(CalculoDto.ValorAplicado, 2));
 
                 var valorImpostoRenda = Math.Round(Math.Round(lucro, 2) * Math.Round((taxaImpostoRenda/100), 2), 2);
-                calculoDTO.ValorLiquido = Math.Round((calculoDTO.ValorBruto - valorImpostoRenda), 2);
+                CalculoDto.ValorLiquido = Math.Round((CalculoDto.ValorBruto - valorImpostoRenda), 2);
 
-                return calculoDTO;
+                return this;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        internal void ValidaParametros(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTBDecimal)
+        {
+            try
+            {
+                if (valorAplicado == null)
+                {
+                    throw new Exception("Valor da aplicação não pode ser nulo!");
+                }
+
+                if (quantidadeMeses == null)
+                {
+                    throw new Exception("Prazo não pode ser nulo!");
+                }
+
+                if (valorAplicado <= 0)
+                {
+                    throw new Exception("Valor da aplicação deve ser maior que zero!");
+                }
+
+                if (quantidadeMeses <= 1)
+                {
+                    throw new Exception("Prazo deve ser maior que um!");
+                }
             }
             catch (Exception ex)
             {

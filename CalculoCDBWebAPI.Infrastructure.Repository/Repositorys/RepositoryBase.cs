@@ -50,7 +50,7 @@ namespace CalculoCDBWebAPI.Infrastructure.Repository.Repositorys
 
         public async Task<TEntity?> GetById(int id)
         {
-            return await _context.Set<TEntity>().FindAsync(id);
+            return await _context.Set<TEntity>().FindAsync(id) ?? null;
         }
 
         public async Task<TEntity> Remove(TEntity obj)
