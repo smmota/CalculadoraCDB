@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6D0rpio9xBG8TiPLDLubaGxTTXqcAyfkAKkMKLnB0aRLcgkNqRijlYaQo3KcJcdnw7XQTkNZ1vUIwMEh85pRQQ==",
+  "dgSpecHash": "zBasadSi6VIfslrfONz4t7fdxz5e0+3b3c9Fe/uCs5BxJI/IWSLC5lmNUsPfN5ig85lfQQG9VVq9dfBiis7eLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
+  "projectFilePath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smota\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\smota\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

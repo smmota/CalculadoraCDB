@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
       "projectName": "CalculoCDBWebAPI.Domain",
-      "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
+      "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
       "packagesPath": "C:\\Users\\smota\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\smota\\AppData\\Roaming\\NuGet\\NuGet.Config",

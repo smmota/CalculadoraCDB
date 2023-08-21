@@ -1,0 +1,2 @@
+C:\Users\Public\Git\CalculadoraCDB\CalculoCDBWebApp\obj\Debug\CalculoCDBWebApp.esproj.SuggestedBindingRedirects.cache
+C:\Users\Public\Git\CalculadoraCDB\CalculoCDBWebApp\obj\Debug\CalculoCDBWebApp.esproj.CoreCompileInputs.cache

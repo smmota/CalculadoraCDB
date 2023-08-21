@@ -3368,11 +3368,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
+      "projectUniqueName": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
       "projectName": "CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC",
-      "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
+      "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC.csproj",
       "packagesPath": "C:\\Users\\smota\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\obj\\",
+      "outputPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\smota\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3389,14 +3389,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application\\CalculoCDBWebAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application\\CalculoCDBWebAPI.Application.csproj"
+            "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application\\CalculoCDBWebAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application\\CalculoCDBWebAPI.Application.csproj"
             },
-            "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain.Services\\CalculoCDBWebAPI.Domain.Services.csproj": {
-              "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain.Services\\CalculoCDBWebAPI.Domain.Services.csproj"
+            "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain.Services\\CalculoCDBWebAPI.Domain.Services.csproj": {
+              "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain.Services\\CalculoCDBWebAPI.Domain.Services.csproj"
             },
-            "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Repository\\CalculoCDBWebAPI.Infrastructure.Repository.csproj": {
-              "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Repository\\CalculoCDBWebAPI.Infrastructure.Repository.csproj"
+            "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Repository\\CalculoCDBWebAPI.Infrastructure.Repository.csproj": {
+              "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Repository\\CalculoCDBWebAPI.Infrastructure.Repository.csproj"
             }
           }
         }

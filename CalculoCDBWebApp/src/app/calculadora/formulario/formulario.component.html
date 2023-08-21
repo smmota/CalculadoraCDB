@@ -1,0 +1,46 @@
+<h2>Calculadora de Investimento</h2>
+
+<form [formGroup]="formAplicacao" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="inputVlAplicacao">Valor da aplicação</label>
+        <input type="text" 
+               class="form-control"  
+               name="inputVlAplicacao" 
+               id="inputVlAplicacao" 
+               formControlName="valorAplicacao" 
+               currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="inputPrazo">Prazo</label>
+        <input type="number" class="form-control"  name="inputPrazo" id="inputPrazo" formControlName="prazo">
+    </div>
+
+    <div class="form-group">
+        <label for="inputVlBruto">Valor bruto</label>
+        <input type="text" 
+               class="form-control"  
+               name="inputVlBruto" 
+               id="inputVlBruto" 
+               formControlName="valorBruto" 
+               readonly="readonly"
+               currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="inputVlLiquido">Valor líquido</label>
+        <input type="text" 
+               class="form-control"  
+               name="inputVlLiquido" 
+               id="inputVlLiquido" 
+               formControlName="valorLiquido" 
+               readonly="readonly"
+               currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+        />
+    </div>
+
+    <input type="submit" class="btn btn-primary mt-4" value="Simular">        
+</form>

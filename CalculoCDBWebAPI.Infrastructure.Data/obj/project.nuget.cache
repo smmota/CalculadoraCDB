@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GBJEqeyr61BSG2gImQCdtQdc4oniucgxf3SHp/OT8LXz7GXKDdXcN3LNU9kFgQ5MnDGGmA1W58B1krZO0qS93Q==",
+  "dgSpecHash": "lu83ajFSDCwW6iWub9/pTw2DmxszBodYEse4PxBGw1j+wdkVHubOBtNeoRXuQCzpBhcnsz0tBIBpRqhmx+syzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
+  "projectFilePath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smota\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\smota\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

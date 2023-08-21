@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj": {}
+    "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj": {
+    "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj",
         "projectName": "CalculoCDBWebAPI.Application.DTO",
-        "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj",
+        "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application.DTO\\CalculoCDBWebAPI.Application.DTO.csproj",
         "packagesPath": "C:\\Users\\smota\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Application.DTO\\obj\\",
+        "outputPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Application.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\smota\\AppData\\Roaming\\NuGet\\NuGet.Config",

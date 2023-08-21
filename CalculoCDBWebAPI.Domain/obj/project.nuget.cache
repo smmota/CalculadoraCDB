@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gf9KJ5c2H4umLVRg9C7BQeYr4reRDr8WKj5E6UAKu3TTTPcHdF8hBlGtQfH4bWBtZf2koGH9G4aEXWIOx8Zp1A==",
+  "dgSpecHash": "hEEr+Nvktk9d2Mh9Rxb8HddmtgSkAxtqdT/BLyaI1+MUBkNvX88zV8etxD0ua24/Ug0nGw5U/1lXj1daHqkOcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -3483,11 +3483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
       "projectName": "CalculoCDBWebAPI.Infrastructure.Data",
-      "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
+      "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Data\\CalculoCDBWebAPI.Infrastructure.Data.csproj",
       "packagesPath": "C:\\Users\\smota\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Infrastructure.Data\\obj\\",
+      "outputPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Infrastructure.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\smota\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3504,8 +3504,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj": {
-              "projectPath": "C:\\Users\\Public\\Git\\calculocdb\\src\\CalculoCDBWebAPI\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj"
+            "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj": {
+              "projectPath": "C:\\Users\\Public\\Git\\CalculadoraCDB\\CalculoCDBWebAPI.Domain\\CalculoCDBWebAPI.Domain.csproj"
             }
           }
         }
