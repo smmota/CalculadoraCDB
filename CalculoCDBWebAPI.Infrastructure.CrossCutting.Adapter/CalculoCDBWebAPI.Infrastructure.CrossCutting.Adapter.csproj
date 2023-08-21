@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoCDBWebAPI.Application.DTO\CalculoCDBWebAPI.Application.DTO.csproj" />
+    <ProjectReference Include="..\CalculoCDBWebAPI.Domain\CalculoCDBWebAPI.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

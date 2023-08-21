@@ -1,0 +1,15 @@
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\bin\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.deps.json
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\bin\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.dll
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\bin\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.pdb
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\bin\Debug\net7.0\CalculoCDBWebAPI.Domain.dll
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\bin\Debug\net7.0\CalculoCDBWebAPI.Domain.pdb
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.csproj.AssemblyReference.cache
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.AssemblyInfoInputs.cache
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.AssemblyInfo.cs
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.csproj.CopyComplete
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.dll
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\refint\CalculoCDBWebAPI.Domain.Core.dll
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\CalculoCDBWebAPI.Domain.Core.pdb
+C:\Users\Public\Git\calculocdb\src\CalculoCDBWebAPI\CalculoCDBWebAPI.Domain.Core\obj\Debug\net7.0\ref\CalculoCDBWebAPI.Domain.Core.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "CalculoCDBWebAPI.Domain.Core/1.0.0": {
+        "dependencies": {
+          "CalculoCDBWebAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CalculoCDBWebAPI.Domain.Core.dll": {}
+        }
+      },
+      "CalculoCDBWebAPI.Domain/1.0.0": {
+        "runtime": {
+          "CalculoCDBWebAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalculoCDBWebAPI.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculoCDBWebAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

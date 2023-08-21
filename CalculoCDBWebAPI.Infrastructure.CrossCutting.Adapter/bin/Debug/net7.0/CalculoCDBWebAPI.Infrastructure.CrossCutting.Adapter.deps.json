@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/1.0.0": {
+        "dependencies": {
+          "CalculoCDBWebAPI.Application.DTO": "1.0.0",
+          "CalculoCDBWebAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.dll": {}
+        }
+      },
+      "CalculoCDBWebAPI.Application.DTO/1.0.0": {
+        "runtime": {
+          "CalculoCDBWebAPI.Application.DTO.dll": {}
+        }
+      },
+      "CalculoCDBWebAPI.Domain/1.0.0": {
+        "runtime": {
+          "CalculoCDBWebAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculoCDBWebAPI.Application.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculoCDBWebAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

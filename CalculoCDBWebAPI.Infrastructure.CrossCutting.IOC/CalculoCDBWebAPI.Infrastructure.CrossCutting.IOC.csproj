@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoCDBWebAPI.Application\CalculoCDBWebAPI.Application.csproj" />
+    <ProjectReference Include="..\CalculoCDBWebAPI.Domain.Services\CalculoCDBWebAPI.Domain.Services.csproj" />
+    <ProjectReference Include="..\CalculoCDBWebAPI.Infrastructure.Repository\CalculoCDBWebAPI.Infrastructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

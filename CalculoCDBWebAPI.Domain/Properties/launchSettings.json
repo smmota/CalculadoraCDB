@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CalculoCDBWebAPI.Domain": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60279;http://localhost:60289"
+    }
+  }
+}

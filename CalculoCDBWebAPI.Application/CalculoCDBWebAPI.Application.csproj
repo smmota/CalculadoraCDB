@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoCDBWebAPI.Application.DTO\CalculoCDBWebAPI.Application.DTO.csproj" />
+    <ProjectReference Include="..\CalculoCDBWebAPI.Domain.Core\CalculoCDBWebAPI.Domain.Core.csproj" />
+    <ProjectReference Include="..\CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter\CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.csproj" />
+  </ItemGroup>
+
+</Project>
