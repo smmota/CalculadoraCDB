@@ -11,4 +11,9 @@
     <ProjectReference Include="..\CalculoCDBWebAPI.Domain\CalculoCDBWebAPI.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
 </Project>

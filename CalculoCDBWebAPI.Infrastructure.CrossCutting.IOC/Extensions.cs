@@ -1,10 +1,6 @@
-﻿using CalculoCDBWebAPI.Application.Interfaces;
-using CalculoCDBWebAPI.Application.Service;
-using CalculoCDBWebAPI.Domain.Core.Interfaces.Repositorys;
+﻿using CalculoCDBWebAPI.Domain.Core.Interfaces.Repositorys;
 using CalculoCDBWebAPI.Domain.Core.Interfaces.Services;
 using CalculoCDBWebAPI.Domain.Services.Services;
-using CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Interfaces;
-using CalculoCDBWebAPI.Infrastructure.CrossCutting.Adapter.Mapper;
 using CalculoCDBWebAPI.Infrastructure.Repository.Repositorys;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -21,19 +17,19 @@ namespace CalculoCDBWebAPI.Infrastructure.CrossCutting.IOC
         {
 
             #region Application
-            services.AddTransient<IApplicationServiceTaxa, ApplicationServiceTaxa>();
+            
             #endregion
 
             #region Services
-            services.AddTransient<IServiceTaxa, ServiceTaxa>();
+            
             #endregion
 
             #region Repositorys
-            services.AddTransient<IRepositoryTaxa, RepositoryTaxa>();
+            
             #endregion
 
             #region Mapper
-            services.AddTransient<IMapperTaxa, MapperTaxa>();
+            
             #endregion
 
             return services;

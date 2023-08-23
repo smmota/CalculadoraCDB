@@ -1,6 +1,4 @@
 ﻿using CalculoCDBWebAPI.Application.DTO.DTO;
-using CalculoCDBWebAPI.Application.Interfaces;
-using CalculoCDBWebAPI.Presentation.Enumarations;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,8 +27,8 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                double txTB = Math.Round(Convert.ToDouble(108), 1);
-                double txCDI = Math.Round(Convert.ToDouble(0.9), 1);
+                double txTB = Convert.ToDouble(108);
+                double txCDI = Convert.ToDouble(0.9);
 
                 CalculoDto calculo = new CalculoDto(AplicacaoDto.ValorAplicado, AplicacaoDto.QuantidadeMeses, txCDI, txTB);
 

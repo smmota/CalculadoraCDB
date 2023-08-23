@@ -24,19 +24,32 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
 
         internal void CalculoValorBruto(decimal? valorAplicado, int? quantidadeMeses, double taxaCDI, double taxaTB)
         {
+            if (valorAplicado == null)
+                throw new ArgumentException("O valor do investimento deve ser informado.");
+            if (quantidadeMeses == null)
+                throw new ArgumentException("O prazo do investimento deve ser informado.");
+            if (valorAplicado == 0)
+                throw new ArgumentException("O valor do investimento deve ser maior que zero.");
+            if (quantidadeMeses <= 1)
+                throw new ArgumentException("O prazo do investimento deve ser ser maior que um.");
+            if (taxaCDI == 0)
+                throw new ArgumentException("A taxa CDI deve ser maior que zero.");
+            if (taxaTB == 0)
+                throw new ArgumentException("A taxa TB deve ser maior que zero.");
+
             ValorAplicado = valorAplicado ?? 0;
             QuantidadeMeses = quantidadeMeses ?? 0;
             ValorBruto = ValorAplicado;
 
-            var taxaTBMes = Math.Round(taxaTB / 100, 2);
-            var taxaCDIMes = Math.Round(taxaCDI / 100, 2);
-            var taxas = Convert.ToDecimal(Math.Round((taxaCDIMes * taxaTBMes), 2));
-            var percentualTaxa = Math.Round((1 + taxas) / 100, 4);
+            var taxaTBMes = taxaTB / 100;
+            var taxaCDIMes = taxaCDI / 100;
+            var taxas = Convert.ToDecimal(taxaCDIMes * taxaTBMes);
+            var percentualTaxa = (1 + taxas) / 100;
 
             for (int i = 0; i < quantidadeMeses; i++)
             {
                 var rendimento = Math.Round(ValorBruto * percentualTaxa, 2);
-                ValorBruto = ValorBruto + rendimento;
+                ValorBruto += rendimento;
             }
         }
 
@@ -45,17 +58,17 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
             decimal taxaImpostoRenda = 0;
 
             if (CalculoDto.QuantidadeMeses > 1 && CalculoDto.QuantidadeMeses <= 6)
-                taxaImpostoRenda = Math.Round(Convert.ToDecimal(22.5), 2);
+                taxaImpostoRenda = Convert.ToDecimal(22.5);
             else if (CalculoDto.QuantidadeMeses > 6 && CalculoDto.QuantidadeMeses <= 12)
-                taxaImpostoRenda = Math.Round(Convert.ToDecimal(20.0), 2);
+                taxaImpostoRenda = Convert.ToDecimal(20.0);
             else if (CalculoDto.QuantidadeMeses > 12 && CalculoDto.QuantidadeMeses <= 24)
-                taxaImpostoRenda = Math.Round(Convert.ToDecimal(17.5), 2);
+                taxaImpostoRenda = Convert.ToDecimal(17.5);
             else if (CalculoDto.QuantidadeMeses > 24)
-                taxaImpostoRenda = Math.Round(Convert.ToDecimal(15.0), 2);
+                taxaImpostoRenda = Convert.ToDecimal(15.0);
 
-            var lucro = (Math.Round(CalculoDto.ValorBruto, 2) - Math.Round(CalculoDto.ValorAplicado, 2));
+            var lucro = CalculoDto.ValorBruto - CalculoDto.ValorAplicado;
 
-            var valorImpostoRenda = Math.Round(Math.Round(lucro, 2) * Math.Round((taxaImpostoRenda / 100), 2), 2);
+            var valorImpostoRenda = lucro * (taxaImpostoRenda / 100);
             CalculoDto.ValorLiquido = Math.Round((CalculoDto.ValorBruto - valorImpostoRenda), 2);
         }
     }
