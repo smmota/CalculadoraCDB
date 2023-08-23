@@ -16,7 +16,6 @@ namespace CalculoCDBWebAPI.Domain.Core.Interfaces.Services
 
         Task<IEnumerable<TEntity>> GetAll();
 
-        Task<TEntity> GetById(Int32 id);
-        Task Dispose();
+        Task<TEntity?> GetById(Int32 id);
     }
 }

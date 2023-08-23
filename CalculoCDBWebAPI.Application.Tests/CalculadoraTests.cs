@@ -14,7 +14,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.Equal(Convert.ToDecimal(108.36), calculo.ValorBruto);
         }
@@ -27,7 +27,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.Equal(Convert.ToDecimal(106.69), calculo.ValorLiquido);
         }
@@ -40,7 +40,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.True(calculo.ValorBruto > calculo.ValorAplicado);
         }
@@ -53,7 +53,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.True(calculo.ValorBruto > calculo.ValorLiquido);
         }
@@ -66,7 +66,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.True(calculo.ValorLiquido > calculo.ValorAplicado);
         }
@@ -79,7 +79,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.True(calculo.QuantidadeMeses > 1);
         }
@@ -92,7 +92,7 @@ namespace CalculoCDBWebAPI.Application.Tests
             double txCDI = 0.9;
             double txTB = 108;
 
-            CalculoDto calculo = new CalculoDto(valorAplicado, prazo, txCDI, txTB);
+            CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
             Assert.True(calculo.ValorAplicado > 0);
         }

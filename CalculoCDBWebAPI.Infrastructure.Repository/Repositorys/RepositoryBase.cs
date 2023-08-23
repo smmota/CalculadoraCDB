@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CalculoCDBWebAPI.Infrastructure.Repository.Repositorys
 {
-    public abstract class RepositoryBase<TEntity> : IAsyncDisposable, IRepositoryBase<TEntity> where TEntity : class 
+    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class 
     {
         private readonly SqlContext _context;
 
@@ -21,26 +21,9 @@ namespace CalculoCDBWebAPI.Infrastructure.Repository.Repositorys
 
         public async Task<TEntity> Add(TEntity obj)
         {
-            try
-            {
-                _context.Set<TEntity>().Add(obj);
-                await _context.SaveChangesAsync();
-                return obj;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public async Task Dispose()
-        {
-            await DisposeAsync();
-        }
-
-        public async ValueTask DisposeAsync()
-        {
-            await _context.DisposeAsync().ConfigureAwait(false);
+            _context.Set<TEntity>().Add(obj);
+            await _context.SaveChangesAsync();
+            return obj;
         }
 
         public async Task<IEnumerable<TEntity>> GetAll()
@@ -55,30 +38,16 @@ namespace CalculoCDBWebAPI.Infrastructure.Repository.Repositorys
 
         public async Task<TEntity> Remove(TEntity obj)
         {
-            try
-            {
-                _context.Set<TEntity>().Remove(obj);
-                await _context.SaveChangesAsync();
-                return obj;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            _context.Set<TEntity>().Remove(obj);
+            await _context.SaveChangesAsync();
+            return obj;
         }
 
         public async Task<TEntity> Update(TEntity obj)
         {
-            try
-            {
-                _context.Entry(obj).State = EntityState.Modified;
-                await _context.SaveChangesAsync();
-                return obj;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            _context.Entry(obj).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return obj;
         }
     }
 }

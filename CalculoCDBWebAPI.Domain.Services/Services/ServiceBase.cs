@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CalculoCDBWebAPI.Domain.Services.Services
 {
-    public abstract class ServiceBase<TEntity> : IAsyncDisposable, IServiceBase<TEntity> where TEntity : class
+    public abstract class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
     {
         private readonly IRepositoryBase<TEntity> _repository;
 
-        public ServiceBase(IRepositoryBase<TEntity> repository) 
+        protected ServiceBase(IRepositoryBase<TEntity> repository) 
         {
             _repository = repository;
         }
@@ -37,19 +37,9 @@ namespace CalculoCDBWebAPI.Domain.Services.Services
             return await _repository.Remove(obj);
         }
 
-        public virtual async Task<TEntity> GetById(int id)
+        public virtual async Task<TEntity?> GetById(int id)
         {
             return await _repository.GetById(id);
-        }
-
-        public virtual async Task Dispose()
-        {
-            await DisposeAsync();
-        }
-
-        public async ValueTask DisposeAsync()
-        {
-            await _repository.Dispose();
         }
     }
 }

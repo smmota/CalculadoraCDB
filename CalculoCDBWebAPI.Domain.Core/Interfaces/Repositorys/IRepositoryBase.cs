@@ -10,14 +10,12 @@ namespace CalculoCDBWebAPI.Domain.Core.Interfaces.Repositorys
     {
         Task<TEntity> Add(TEntity obj);
 
-        Task<TEntity> GetById(int id);
+        Task<TEntity?> GetById(int id);
 
         Task<IEnumerable<TEntity>> GetAll();
 
         Task<TEntity> Update(TEntity obj);
 
         Task<TEntity> Remove(TEntity obj);
-
-        Task Dispose();
     }
 }
