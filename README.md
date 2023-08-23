@@ -38,53 +38,56 @@ Abaixo estão listadas as ferramentas utilizadas para o desenvolvimento dos proj
 
 Para fazer o clone do projeto do repositório remoto para o repositório local, na aba <> Code, clique no botão verde <> Code e copie a url informada na aba HTTPS.
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/TelaGil01.png)
 
 Selecione o diretório onde ficará localizado o repositório local e com o botão direito do mouse, clique na opção "Git Bash Here" para executar o terminal do git
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/CloneRepo.png)
 
 No terminal digite o comando "$ git clone -b <branch> <url do repositório remoto>" informando a branch e a url do repositório do projeto e clique em enter para iniciar o clone no repositório local
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/CloneRepo2.png)
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/CloneRepo3.png)
 
 #### Executando o projeto backend no Visual Studio 2022
 
 Na pasta criada após clone é possível visualizar todos os arquivos do projeto. Para executar o projeto backend utilizando a IDE do Visual Studio 2022, efetue o duplo clique no arquivo da solução "CalculoCDBWebAPI.sln" e aguarde o carregamento.
+
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_01.png)
+
 Com a solução carregada na IDE, altere o projeto StartUp para "CalculoCDBWebAPI.Presentation" e clique no botão "https".
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_02.png)
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_03.png)
 
 A solução será compilada e seguida o swaager da Web API será carregado no browser
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_04.png)
 
 #### Executando o projeto frontend no Visual Studio Code
 
 Entre na pasta "CalculoCDBWebApp" e digite "cmd" na barra de endereço do Windows Explore e aperte enter. No prompt de comando do windows digite o comando "code ." e aperte enter.
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_01.png)
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_02.png)
 
 
 Na aba "Terminal", clique na opção "New Terminal". Em seguida digite o comando "npm install" para instalar todas as dependências do projeto.
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_03.png)
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_04.png)
 
 Após a instalação das dependências, digite o comando "ng serve". ao concluir a compilação com sucesso, clique na url para visualizar a página frontend da aplicação.
 
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_05.png)
 
-Imagem Aqui
+![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Frontend_06.png)
 
 ## ⚙️ Executando os testes
 
-Os testes foram realizados com dados mock para validar se o cálculo foram realizados corretamente
+Os testes foram realizados com dados mock para validar se o cálculo foram realizados corretamente, se os parâmetros de entrada estao corretos e se as validações funcionam.
