@@ -9,33 +9,33 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorBruto()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.00);
+            double? valorAplicado = Convert.ToDouble(100.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
 
             CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
-            Assert.Equal(Convert.ToDecimal(108.36), calculo.ValorBruto);
+            Assert.Equal(Convert.ToDouble(108.05), calculo.ValorBruto);
         }
 
         [Fact]
         public void ValorLiquido()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.00);
+            double? valorAplicado = Convert.ToDouble(100.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
 
             CalculoDto calculo = new(valorAplicado, prazo, txCDI, txTB);
 
-            Assert.Equal(Convert.ToDecimal(106.69), calculo.ValorLiquido);
+            Assert.Equal(Convert.ToDouble(106.44), calculo.ValorLiquido);
         }
 
         [Fact]
         public void ValorBruto_MaiorValorAplicacao()
         {
-            decimal? valorAplicado = Convert.ToDecimal(150.00);
+            double? valorAplicado = Convert.ToDouble(150.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -48,7 +48,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorBruto_MaiorValorLiquido()
         {
-            decimal? valorAplicado = Convert.ToDecimal(150.00);
+            double? valorAplicado = Convert.ToDouble(150.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -61,7 +61,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorLiquido_MaiorValorAplicacao()
         {
-            decimal? valorAplicado = Convert.ToDecimal(150.00);
+            double? valorAplicado = Convert.ToDouble(150.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -74,7 +74,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void PrazoInvestimento_MaiorQueUmMes()
         {
-            decimal? valorAplicado = Convert.ToDecimal(150.00);
+            double? valorAplicado = Convert.ToDouble(150.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -87,7 +87,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorInvestimento_MaiorQueZero()
         {
-            decimal? valorAplicado = Convert.ToDecimal(150.00);
+            double? valorAplicado = Convert.ToDouble(150.00);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -100,7 +100,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void PrazoInvestimento_Nulo()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.0);
+            double? valorAplicado = Convert.ToDouble(100.0);
             int? prazo = null;
             double txCDI = 0.9;
             double txTB = 108;
@@ -111,7 +111,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void PrazoInvestimento_MenorQueDois()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.0);
+            double? valorAplicado = Convert.ToDouble(100.0);
             int? prazo = 1;
             double txCDI = 0.9;
             double txTB = 108;
@@ -122,7 +122,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorAplicacao_Nulo()
         {
-            decimal? valorAplicado = null;
+            double? valorAplicado = null;
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -133,7 +133,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void ValorAplicacao_Zero()
         {
-            decimal? valorAplicado = Convert.ToDecimal(0);
+            double? valorAplicado = Convert.ToDouble(0);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 108;
@@ -144,7 +144,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void TaxaCDI_Zero()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.0);
+            double? valorAplicado = Convert.ToDouble(100.0);
             int? prazo = 8;
             double txCDI = 0;
             double txTB = 108;
@@ -155,7 +155,7 @@ namespace CalculoCDBWebAPI.Application.Tests
         [Fact]
         public void TaxaTB_Zero()
         {
-            decimal? valorAplicado = Convert.ToDecimal(100.0);
+            double? valorAplicado = Convert.ToDouble(100.0);
             int? prazo = 8;
             double txCDI = 0.9;
             double txTB = 0;

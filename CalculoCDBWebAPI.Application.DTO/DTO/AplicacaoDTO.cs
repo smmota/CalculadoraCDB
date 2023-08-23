@@ -11,7 +11,7 @@ namespace CalculoCDBWebAPI.Application.DTO.DTO
     public class AplicacaoDto
     {
         [Required(ErrorMessage = "Informe o valor aplicado")]
-        public Decimal? ValorAplicado { get; set; }
+        public Double? ValorAplicado { get; set; }
 
         [Required(ErrorMessage = "Informe a quantidade de meses")]
         public int? QuantidadeMeses { get; set; }

@@ -18,25 +18,16 @@ namespace CalculoCDBWebAPI.Presentation.Controllers
         {
             try
             {
-                if (AplicacaoDto.ValorAplicado <= 0)
-                    ModelState.AddModelError("Valor Aplicado", "O valor aplicado não pode ser menor ou igual a zero");
+                double txTB = 108.0;
+                double txCDI = 0.9;
 
-                if (AplicacaoDto.QuantidadeMeses <= 1)
-                    ModelState.AddModelError("Quantidade de Meses", "A quantidade de meses deve ser maior que um");
-
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
-
-                double txTB = Convert.ToDouble(108);
-                double txCDI = Convert.ToDouble(0.9);
-
-                CalculoDto calculo = new CalculoDto(AplicacaoDto.ValorAplicado, AplicacaoDto.QuantidadeMeses, txCDI, txTB);
+                CalculoDto calculo = new(AplicacaoDto.ValorAplicado, AplicacaoDto.QuantidadeMeses, txCDI, txTB);
 
                 return Ok(calculo);
             }
-            catch
+            catch(ArgumentException ex)
             {
-                return BadRequest("Erro ao calcular o investimento!");
+                return BadRequest($"Erro ao calcular o investimento! {ex.Message}");
             }
         }
     }
