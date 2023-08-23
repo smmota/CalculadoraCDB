@@ -36,15 +36,15 @@ Abaixo estão listadas as ferramentas utilizadas para o desenvolvimento dos proj
 
 #### Clone do projeto
 
-Para fazer o clone do projeto do repositório remoto para o repositório local, na aba <> Code, clique no botão verde <> Code e copie a url informada na aba HTTPS.
+Para clonar o projeto do repositório remoto para o repositório local, na aba <> Code, clique no botão verde <> Code e copie a url informada na aba HTTPS.
 
 ![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/TelaGil01.png)
 
-Selecione o diretório onde ficará localizado o repositório local e com o botão direito do mouse, clique na opção "Git Bash Here" para executar o terminal do git
+Selecione o diretório do repositório local e com o botão direito do mouse, clique na opção "Git Bash Here" para executar o terminal do git
 
 ![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/CloneRepo.png)
 
-No terminal digite o comando "$ git clone -b <branch> <url do repositório remoto>" informando a branch e a url do repositório do projeto e clique em enter para iniciar o clone no repositório local
+Digite o comando "$ git clone -b <branch> <url do repositório remoto>", informando a branch e a url do repositório remoto e aperte enter para iniciar o clone no repositório local
 
 ![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/CloneRepo2.png)
 
@@ -62,7 +62,7 @@ Com a solução carregada na IDE, altere o projeto StartUp para "CalculoCDBWebAP
 
 ![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_03.png)
 
-A solução será compilada e seguida o swaager da Web API será carregado no browser
+A solução será compilada e o swaager da Web API será carregado no browser
 
 ![image](https://github.com/smmota/CalculadoraCDB/blob/master/Image/Backend_04.png)
 
